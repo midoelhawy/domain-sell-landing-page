@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>This domain name is available for purchase!  </title>
+
+</head>
+
+<body style="background-image: url('/images/bg/1.jpg');">
+  <div class="main">
+
+    <div class="container">
+
+      <div class="coming-soon-container">
+        <h1 id="top-header"></h1>
+        <p id="top-msg"></p>
+      </div>
+  
+
+    </div>
+
+
+  </div>
+
+
+  <script>
+    const domain = window.location.hostname;
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const msg = `Buy ${domain}!`
+      document.title = msg
+
+      const elTopHeader = document.querySelector("#top-header");
+
+      if (elTopHeader) {
+        elTopHeader.innerHTML = msg
+      }
+
+      const elTopMsg = document.querySelector("#top-msg");
+
+
+      const tomMSG = `
+        This domain name is available for purchase!
+
+        If you're looking to bring your online project to life with a unique domain name, this is the opportunity you've been searching for. The domain __DOMAIN_NAME__ is now up for sale.\n
+
+        For further information and to discuss the purchase details, feel free to reach out to me via email at: ahekal369[AT]gmail.com\n
+
+        Don't miss out on the chance to own a domain name that reflects your idea and goals. Contact me today and start your online journey with __DOMAIN_NAME__.        
+                
+        `
+      if (elTopMsg) {
+        elTopMsg.innerHTML = tomMSG.replaceAll('__DOMAIN_NAME__', domain)
+      }
+
+      setInterval(() => {
+        const randomImage = Math.floor(Math.random() * 20) + 1;
+        console.log("Change bg to", randomImage);
+        document.body.style.backgroundImage = `url('/images/bg/${randomImage}.jpg')`;
+      }, 10000);
+
+
+
+    })
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

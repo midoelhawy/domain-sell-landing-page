@@ -1,0 +1,41 @@
+  @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Athiti', sans-serif;
+  
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* filter: blur(5px) brightness(0.7) saturate(1.5);  */
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background: #ffffff80;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.coming-soon-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+p {
+  font-size: 23px;
+}
